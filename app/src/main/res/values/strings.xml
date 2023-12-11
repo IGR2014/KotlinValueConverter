@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Value Converter</string>
+    <string name="enter_value">Enter value</string>
+    <string name="text_millimeters">millimeters</string>
+    <string name="text_centimeters">centimeters</string>
+    <string name="text_decimeters">decimeters</string>
+    <string name="text_meters">meters</string>
+    <string name="text_kilometers">kilometers</string>
+    <string name="length">Length</string>
+    <string name="mass">Mass</string>
+    <string name="time">Time</string>
+    <string name="speed">Speed</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="text_inches">inches</string>
+    <string name="text_feet">feet</string>
+    <string name="text_yards">yards</string>
+    <string name="text_miles">miles</string>
+    <string name="text_grams">grams</string>
+    <string name="text_milligrams">milligrams</string>
+    <string name="text_kilograms">kilograms</string>
+    <string name="text_tonnes">tonnes</string>
+    <string name="text_pounds">pounds</string>
+    <string name="text_ounces">ounces</string>
+    <string name="text_centners">centners</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Конвертёр Величин</string>
+    <string name="enter_value">Введите значение</string>
+    <string name="text_millimeters">миллиметры</string>
+    <string name="text_centimeters">сантиметры</string>
+    <string name="text_decimeters">дециметры</string>
+    <string name="text_meters">метры</string>
+    <string name="text_kilometers">километры</string>
+    <string name="length">Длина</string>
+    <string name="mass">Масса</string>
+    <string name="time">Время</string>
+    <string name="speed">Скорость</string>
+    <string name="drawer_open">Открыть Меню</string>
+    <string name="drawer_close">Закрыть Меню</string>
+    <string name="text_inches">дюймы</string>
+    <string name="text_feet">футы</string>
+    <string name="text_yards">ярды</string>
+    <string name="text_miles">мили</string>
+    <string name="text_grams">граммы</string>
+    <string name="text_milligrams">миллиграммы</string>
+    <string name="text_kilograms">килограммы</string>
+    <string name="text_tonnes">тонны</string>
+    <string name="text_pounds">фунты</string>
+    <string name="text_ounces">унции</string>
+    <string name="text_centners">центнеры</string>
+</resources>

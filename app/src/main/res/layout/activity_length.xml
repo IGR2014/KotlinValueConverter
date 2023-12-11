@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityLength">
+
+    <!-- Вертикальное размещение элементов -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Верхняя полоса активности -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_toolbar">
+
+            <!-- Изначальное значение и единицы измерения -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+
+                <EditText
+                    android:id="@+id/editTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/enter_value"
+                    android:gravity="center_vertical|start"
+                    android:inputType="numberDecimal"
+                    android:autofillHints=""
+                    android:layout_margin="5dp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:entries="@array/dropdown_options_length"
+                    android:gravity="center_vertical|end"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Миллиметры -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+
+                <TextView
+                    android:id="@+id/value_millimeters"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_millimeters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_millimeters"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Сантиметры -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_centimeters"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_centimeters"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Дециметры -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_decimeters"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_decimeters"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Метры -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_meters"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_meters"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Километры -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_kilometers"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_kilometers"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Дюймы -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_inches"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_inches"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Футы -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_feet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_feet"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Ярды -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_yards"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_yards"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+            <!-- Мили -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_miles"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_miles"
+                    android:layout_margin="5dp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

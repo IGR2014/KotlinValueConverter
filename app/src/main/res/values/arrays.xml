@@ -1,0 +1,26 @@
+<resources>
+    <!-- Массив единиц измерения длины -->
+    <string-array
+	name="dropdown_options_length">
+        <item>@string/text_millimeters</item>
+        <item>@string/text_centimeters</item>
+        <item>@string/text_decimeters</item>
+        <item>@string/text_meters</item>
+        <item>@string/text_kilometers</item>
+        <item>@string/text_inches</item>
+        <item>@string/text_feet</item>
+        <item>@string/text_yards</item>
+        <item>@string/text_miles</item>
+    </string-array>
+    <!-- Массив единиц измерения массы -->
+    <string-array
+        name="dropdown_options_mass">
+        <item>@string/text_milligrams</item>
+        <item>@string/text_grams</item>
+        <item>@string/text_kilograms</item>
+        <item>@string/text_centners</item>
+        <item>@string/text_tonnes</item>
+        <item>@string/text_pounds</item>
+        <item>@string/text_ounces</item>
+    </string-array>
+</resources>
