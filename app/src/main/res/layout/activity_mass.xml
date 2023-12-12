@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="?attr/colorSecondaryContainer" >
 
         <!-- Верхняя полоса активности -->
         <androidx.appcompat.widget.Toolbar
@@ -44,6 +45,7 @@
             android:layout_margin="10dp"
             android:layout_marginStart="9dp"
             android:layout_marginEnd="9dp"
+            android:background="?attr/colorPrimaryContainer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_toolbar">
@@ -54,23 +56,27 @@
                 android:layout_height="64dp">
 
                 <EditText
-                    android:id="@+id/editTextInput"
+                    android:id="@+id/input_mass"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:hint="@string/enter_value"
                     android:gravity="center_vertical|start"
                     android:inputType="numberDecimal"
                     android:autofillHints=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/spinner_mass"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:entries="@array/dropdown_options_mass"
                     android:gravity="center_vertical|end"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Миллиграммы -->
@@ -83,18 +89,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
-                    android:id="@+id/text_millimeters"
+                    android:id="@+id/text_milligrams"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_milligrams"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Граммы -->
@@ -107,17 +117,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_grams"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Килограммы -->
@@ -130,17 +144,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_kilograms"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Центнеры -->
@@ -153,17 +171,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_centners"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Тонны -->
@@ -176,17 +198,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_tonnes"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Фунты -->
@@ -199,17 +225,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_pounds"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
             <!-- Унции -->
@@ -222,17 +252,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|end"
                     android:text=""
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
                     android:gravity="center_vertical|start"
                     android:text="@string/text_ounces"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
             </TableRow>
 
         </TableLayout>
