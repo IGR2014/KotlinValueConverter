@@ -107,7 +107,7 @@ class ActivitySpeed : AppCompatActivity() {
 		// Нажата кнопка "Назад"
 		if (item.itemId == android.R.id.home) {
 			// Возврат назад
-			onBackPressed()
+			onBackPressedDispatcher.onBackPressed()
 			return true
 		}
 		// Обработчик по-умолчанию
