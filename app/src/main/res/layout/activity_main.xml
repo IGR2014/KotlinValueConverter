@@ -1,51 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/top_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityMain">
+    android:fitsSystemWindows="true"
+    tools:context=".ActivityMain" >
 
-    <!-- Вертикальное размещение элементов -->
-    <LinearLayout
+    <!-- Верхняя полоса активности -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Выезжающее справа меню -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_below="@+id/activity_toolbar" >
 
-        <!-- Верхняя полоса активности -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/activity_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        <!-- Навигация -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/navigation_menu" />
 
-            <!-- Заголовок -->
-            <TextView
-                android:id="@+id/titleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
 
-        </androidx.appcompat.widget.Toolbar>
-
-    </LinearLayout>
-
-    <!-- Навигация -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/navigation_menu" />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
