@@ -39,6 +39,11 @@
             android:name=".ActivityTime"
             android:exported="true" />
 
+        <!-- Активность конвертёра скорости -->
+        <activity
+            android:name=".ActivitySpeed"
+            android:exported="true" />
+
     </application>
 
 </manifest>

@@ -32,4 +32,7 @@
     <string name="text_months">months</string>
     <string name="text_years">years</string>
     <string name="text_weeks">weeks</string>
+    <string name="text_meters_per_second">m/s</string>
+    <string name="text_kilometers_per_hour">km/h</string>
+    <string name="text_miles_per_hour">mil/h</string>
 </resources>

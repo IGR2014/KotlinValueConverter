@@ -40,4 +40,12 @@
         <item>@string/text_years</item>
     </string-array>
 
+    <!-- Массив единиц измерения скорости -->
+    <string-array
+        name="dropdown_options_speed">
+        <item>@string/text_meters_per_second</item>
+        <item>@string/text_kilometers_per_hour</item>
+        <item>@string/text_miles_per_hour</item>
+    </string-array>
+
 </resources>
