@@ -23,4 +23,13 @@
     <string name="text_pounds">pounds</string>
     <string name="text_ounces">ounces</string>
     <string name="text_centners">centners</string>
+    <string name="text_microseconds">microseconds</string>
+    <string name="text_milliseconds">milliseconds</string>
+    <string name="text_seconds">seconds</string>
+    <string name="text_minutes">minutes</string>
+    <string name="text_hours">hours</string>
+    <string name="text_days">days</string>
+    <string name="text_months">months</string>
+    <string name="text_years">years</string>
+    <string name="text_weeks">weeks</string>
 </resources>

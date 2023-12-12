@@ -34,6 +34,11 @@
             android:name=".ActivityMass"
             android:exported="true" />
 
+        <!-- Активность конвертёра времени -->
+        <activity
+            android:name=".ActivityTime"
+            android:exported="true" />
+
     </application>
 
 </manifest>

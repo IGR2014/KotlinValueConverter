@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTime">
+
+    <!-- Вертикальное размещение элементов -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorSecondaryContainer" >
+
+        <!-- Верхняя полоса активности -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:background="?attr/colorPrimaryContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_toolbar">
+
+            <!-- Изначальное значение и единицы измерения -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+
+                <EditText
+                    android:id="@+id/input_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:hint="@string/enter_value"
+                    android:gravity="center_vertical|start"
+                    android:inputType="numberDecimal"
+                    android:autofillHints=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:entries="@array/dropdown_options_time"
+                    android:gravity="center_vertical|end"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Микросекунды -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+
+                <TextView
+                    android:id="@+id/value_microseconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/text_milligrams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_microseconds"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Миллисекунды -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_milliseconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_milliseconds"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Секунды -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_seconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_seconds"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Минуты -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_minutes"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Часы -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_hours"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Дни -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_days"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Недели -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_weeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_weeks"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Месяцы -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_months"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_months"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <!-- Годы -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/value_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|end"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorOnPrimarySurface"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/text_years"
+                    android:layout_margin="5dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

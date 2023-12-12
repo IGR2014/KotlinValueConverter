@@ -76,7 +76,7 @@ class ActivityMain : AppCompatActivity() {
 					startActivity(
 						Intent(
 							applicationContext,
-							ActivityLength::class.java
+							ActivityTime::class.java
 						)
 					)
 				}

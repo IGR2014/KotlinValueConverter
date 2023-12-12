@@ -1,4 +1,5 @@
 <resources>
+
     <!-- Массив единиц измерения длины -->
     <string-array
 	name="dropdown_options_length">
@@ -12,6 +13,7 @@
         <item>@string/text_yards</item>
         <item>@string/text_miles</item>
     </string-array>
+
     <!-- Массив единиц измерения массы -->
     <string-array
         name="dropdown_options_mass">
@@ -23,4 +25,19 @@
         <item>@string/text_pounds</item>
         <item>@string/text_ounces</item>
     </string-array>
+
+    <!-- Массив единиц измерения массы -->
+    <string-array
+        name="dropdown_options_time">
+        <item>@string/text_microseconds</item>
+        <item>@string/text_milliseconds</item>
+        <item>@string/text_seconds</item>
+        <item>@string/text_minutes</item>
+        <item>@string/text_hours</item>
+        <item>@string/text_days</item>
+        <item>@string/text_weeks</item>
+        <item>@string/text_months</item>
+        <item>@string/text_years</item>
+    </string-array>
+
 </resources>

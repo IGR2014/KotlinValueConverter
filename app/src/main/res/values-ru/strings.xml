@@ -24,4 +24,13 @@
     <string name="text_pounds">фунты</string>
     <string name="text_ounces">унции</string>
     <string name="text_centners">центнеры</string>
+    <string name="text_microseconds">микросекунды</string>
+    <string name="text_milliseconds">миллисекунды</string>
+    <string name="text_seconds">секунды</string>
+    <string name="text_minutes">минуты</string>
+    <string name="text_hours">часы</string>
+    <string name="text_days">дни</string>
+    <string name="text_months">месяцы</string>
+    <string name="text_years">года</string>
+    <string name="text_weeks">недели</string>
 </resources>
