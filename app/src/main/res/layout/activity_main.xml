@@ -40,6 +40,65 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/activity_toolbar" >
 
+        <!-- Кнопки -->
+        <LinearLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp" >
+
+            <!-- Длина -->
+            <Button
+                android:id="@+id/button_length"
+                android:layout_width="match_parent"
+                android:drawableTop="@drawable/ic_length"
+                android:gravity="center"
+                android:text="@string/length"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <!-- Масса -->
+            <Button
+                android:id="@+id/button_mass"
+                android:layout_width="match_parent"
+                android:drawableTop="@drawable/ic_mass"
+                android:gravity="center"
+                android:text="@string/mass"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <!-- Время -->
+            <Button
+                android:id="@+id/button_time"
+                android:layout_width="match_parent"
+                android:drawableTop="@drawable/ic_time"
+                android:gravity="center"
+                android:text="@string/time"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <!-- Скорость -->
+            <Button
+                android:id="@+id/button_speed"
+                android:layout_width="match_parent"
+                android:drawableTop="@drawable/ic_speed"
+                android:gravity="center"
+                android:text="@string/speed"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
         <!-- Навигация -->
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_view"

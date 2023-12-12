@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -59,6 +60,8 @@ class ActivityMain : AppCompatActivity() {
 							ActivityLength::class.java
 						)
 					)
+					// Закрытие выезжающих меню
+					drawerLayout.closeDrawers()
 				}
 				// Конвертёр масс
 				R.id.nav_mass -> {
@@ -69,6 +72,8 @@ class ActivityMain : AppCompatActivity() {
 							ActivityMass::class.java
 						)
 					)
+					// Закрытие выезжающих меню
+					drawerLayout.closeDrawers()
 				}
 				// Конвертёр времени
 				R.id.nav_time -> {
@@ -79,6 +84,8 @@ class ActivityMain : AppCompatActivity() {
 							ActivityTime::class.java
 						)
 					)
+					// Закрытие выезжающих меню
+					drawerLayout.closeDrawers()
 				}
 				// Конвертёр скорости
 				R.id.nav_speed -> {
@@ -89,6 +96,8 @@ class ActivityMain : AppCompatActivity() {
 							ActivitySpeed::class.java
 						)
 					)
+					// Закрытие выезжающих меню
+					drawerLayout.closeDrawers()
 				}
 			}
 			true
@@ -99,6 +108,54 @@ class ActivityMain : AppCompatActivity() {
 			actionBar.setDisplayShowTitleEnabled(false)
 			actionBar.setHomeAsUpIndicator(R.drawable.ic_list)
 			actionBar.setDisplayHomeAsUpEnabled(true)
+		}
+
+		// Обработчик кнопки конвертёра длин
+		val buttonLength: Button = findViewById(R.id.button_length)
+		buttonLength.setOnClickListener {
+			// Запуск активности конвертёра длин
+			startActivity(
+				Intent(
+					applicationContext,
+					ActivityLength::class.java
+				)
+			)
+		}
+
+		// Обработчик кнопки конвертёра масс
+		val buttonMass: Button = findViewById(R.id.button_mass)
+		buttonMass.setOnClickListener {
+			// Запуск активности конвертёра длин
+			startActivity(
+				Intent(
+					applicationContext,
+					ActivityMass::class.java
+				)
+			)
+		}
+
+		// Обработчик кнопки конвертёра времени
+		val buttonTime: Button = findViewById(R.id.button_time)
+		buttonTime.setOnClickListener {
+			// Запуск активности конвертёра длин
+			startActivity(
+				Intent(
+					applicationContext,
+					ActivityTime::class.java
+				)
+			)
+		}
+
+		// Обработчик кнопки конвертёра скорости
+		val buttonSpeed: Button = findViewById(R.id.button_speed)
+		buttonSpeed.setOnClickListener {
+			// Запуск активности конвертёра длин
+			startActivity(
+				Intent(
+					applicationContext,
+					ActivitySpeed::class.java
+				)
+			)
 		}
 
 	}
